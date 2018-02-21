@@ -17,3 +17,6 @@ selenium.php
 
 # for netbeans
 nbproject
+
+# node files
+themes/main-theme/node_modules/*

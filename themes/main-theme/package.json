@@ -1,0 +1,44 @@
+{
+  "name": "main-theme",
+  "description": "Personal website",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Analia Mok",
+  "homepage": "",
+  "contributors": "",
+  "bugs": {
+    "url": ""
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-line-ending-corrector": "^1.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.9",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "notify-send": "^0.1.2",
+    "pump": "^3.0.0"
+  },
+  "respository": "git://github.com/AnaliaMok/PersonalWebsite-October.git",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }
+}
