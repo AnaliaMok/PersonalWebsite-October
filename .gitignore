@@ -22,4 +22,4 @@ nbproject
 themes/main-theme/node_modules/*
 
 # local files
-database.php
+config/database.php

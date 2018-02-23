@@ -61,7 +61,6 @@ var lineEndCorrector = require('gulp-line-ending-corrector');
 // BrowserSync
 gulp.task('browser-sync', function () {
   browserSync.init({
-
     // Project URL.
     proxy: projectUrl,
     open: true,
@@ -72,7 +71,6 @@ gulp.task('browser-sync', function () {
 
     // Use a specific port (instead of the one auto-detected by Browsersync).
     //port: 80,
-
   });
 });
 
@@ -132,4 +130,8 @@ gulp.task('default', ['sass', 'js', 'browser-sync'], function () {
   gulp.watch("../plugins/**/*.php", reload); // PHP Changes
   gulp.watch("./assets/sass/**/*.scss", ['sass']); // Sass changes
   gulp.watch("./assets/js/*.js", ['js', reload]); // JS changes
+  gulp.watch("./content/**/*.htm").on('change', browserSync.reload);
+  gulp.watch("./layouts/**/*.htm").on('change', browserSync.reload);
+  gulp.watch("./pages/**/*.htm").on('change', browserSync.reload);
+  gulp.watch("./partials/**/*.htm").on('change', browserSync.reload);
 });
