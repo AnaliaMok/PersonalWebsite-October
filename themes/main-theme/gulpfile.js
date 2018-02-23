@@ -107,6 +107,7 @@ gulp.task('jshint', function () {
     }))
 });
 
+// FIXME
 // Sass Compilation
 gulp.task('sass', function () {
   return gulp.src('./assets/sass/**/*.scss')
@@ -120,7 +121,7 @@ gulp.task('sass', function () {
     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(sourcemaps.write(''))
     .pipe(lineEndCorrector()) // Consistent Line Endings for non UNIX systems.
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream())
     .pipe(notify({message: 'Sass Compilation Successfully', onLast: true}));
 });
