@@ -20,3 +20,6 @@ nbproject
 
 # node files
 themes/main-theme/node_modules/*
+
+# local files
+database.php

@@ -4,4 +4,68 @@ layout = "default"
 description = "This is the home page"
 is_hidden = 0
 ==
-<h1>Hello</h1>
+<div id="home-header">
+    <div class="overlay" id="home-overlay">
+        <div id="home-content">
+            <h2>Full Stack Developer</h2>
+            <p>
+                Hi, I’m Analia. I build responsive websites and web apps for all modern browsers, utilizing popular tools and content management systems such as ES6 and Wordpress.
+            </p>
+            <!-- TODO: Link to work page -->
+            <a href="#">Check Out My Work</a>
+        </div><!-- #home-content -->
+    </div><!-- .overlay -->
+</div><!-- #home-header -->
+<div id="who-cta">
+    <h2>Who Am I?</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, odio, debitis delectus libero laboriosam quis aspernatur dolorem nihil numquam ipsum maxime earum quos ipsa aliquam impedit explicabo ea blanditiis similique accusantium fugiat assumenda doloremque enim voluptatum. Ea, placeat, aspernatur, libero cum autem amet tempora est facere deleniti impedit assumenda explicabo voluptatum velit harum ab veritatis quo expedita deserunt voluptas minus beatae earum in? Modi, deleniti, vitae, quisquam quod facilis eveniet hic saepe error assumenda numquam suscipit corporis eligendi nostrum voluptatem illum in quis enim minus natus pariatur? Repellat, modi, dolore, fugiat sit porro saepe perspiciatis laudantium explicabo necessitatibus reprehenderit ipsum.
+    </p>
+</div><!-- #who-cta -->
+<div id="skills-ctar">
+    <div id="skills-logo-bar">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <i class="fab fa-php"></i>
+        <i class="fab fa-wordpress-simple"></i>
+    </div>
+    <div class="skills-list-container">
+        <h2>What I Also Know</h2>
+        <div class="skills-column">
+            <ul>
+                <li>C-99</li>
+                <li>MySQL</li>
+                <li>Java 8</li>
+                <li>Python 3</li>
+            </ul>
+        </div>        
+        <div class="skills-column">
+            <ul>
+                <li>OpenGL 3.0</li>
+                <li>GLSL 1.3</li>
+                <li>jQuery</li>
+                <li>CodeIgniter 3.4</li>
+            </ul>
+        </div>
+    </div><!-- .skills-list-container -->
+    <div class="skills-list-container">
+        <h2>What I'm Familiar With</h2>
+        <div class="skills-column">
+            <ul>
+                <li>Android Dev</li>
+                <li>iOS Dev</li>
+                <li>Cordova</li>
+                <li>Django</li>
+                <li>Electron JS</li>
+            </ul>
+        </div>
+    </div>
+</div><!-- #skills-cta -->
+<div id="work-cta">
+    <h2>What I've Worked On</h2>
+    <!-- TODO: Dynamically generate -->
+    <div class="work-grid"></div>
+    <!-- TODO: Change Link to Work page -->
+    <a href="{{ 'work'|page }}">Wait! I've Done More</a>
+</div>
