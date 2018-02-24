@@ -13,3 +13,7 @@
 @mixin blue-gradient(){
   background: linear-gradient(rgba(47, 128, 237, .5) 30%, rgba(24, 177, 249, 0.5));
 }
+
+@mixin blue-gradient-solid(){
+  background: linear-gradient($darker-blue 30%, $sky-blue);
+}

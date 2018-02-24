@@ -25,6 +25,17 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none; }
 
+ul {
+  list-style: none; }
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #F2F2F2;
+  border: 2px solid #F2F2F2; }
+
 .navbar {
   position: absolute;
   top: 0;
@@ -50,6 +61,33 @@ a {
 
 .navbar__menu-items li a {
   color: #2D2D2D; }
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #F9F9F9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #2F80ED), to(#18B1F9));
+  background: -webkit-linear-gradient(#2F80ED 30%, #18B1F9);
+  background: linear-gradient(#2F80ED 30%, #18B1F9); }
+
+footer #hiring-cta {
+  margin-bottom: 2rem; }
+
+footer #hiring-cta h2 {
+  margin-bottom: 1rem; }
+
+footer p {
+  font-weight: 300;
+  font-size: 1.2rem; }
+
+footer div#social-logos {
+  margin-top: 0.5rem;
+  font-size: 2.5rem; }
+
+footer div#social-logos a {
+  margin: 0 0.5rem;
+  color: #F9F9F9; }
 
 .home__header {
   height: 75vh;
@@ -116,14 +154,6 @@ a {
   .home__content p {
     width: 42%; } }
 
-.home__content a {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  color: #F2F2F2;
-  border: 2px solid #F2F2F2; }
-
 .home__who-cta {
   padding: 3rem 2rem;
   background-color: #F9F9F9;
@@ -146,3 +176,14 @@ a {
 @media screen and (min-width: 1024px) {
   .home__who-cta p {
     width: 75%; } }
+
+.home__skills-cta {
+  padding: 3rem 2rem;
+  text-align: center; }
+
+.home__work-cta {
+  text-align: center; }
+
+.home__work-cta .button {
+  color: #18B1F9;
+  border: 2px solid #18B1F9; }
