@@ -1,0 +1,12 @@
+description = "Partial that displays 5 featured works"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ featured-work }}"
+postsPerPage = "{{ 5 }}"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "home"
+==
+{% component 'blogPosts' %}

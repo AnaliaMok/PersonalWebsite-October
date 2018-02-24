@@ -1,0 +1,8 @@
+description = "Overriding blogPosts partial"
+==
+
+{% if blogPosts.posts.total %}
+  {% for post in blogPosts.posts %}
+    <a href="{{ post.url }}" class="work">{{ post.title }}</a>
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,8 @@
+1.0.1: First version of PostExtension
+1.0.2:
+  - Created setting table
+  - create_settings_table.php
+1.0.3:
+  - Forcing settings update
+1.0.4:
+  - Refactored id to post_id
