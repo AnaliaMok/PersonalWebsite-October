@@ -18,17 +18,23 @@ a {
   text-decoration: none; }
 
 .navbar {
-  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0.75rem 1.5rem;
   background-color: transparent;
   text-align: right; }
 
 .navbar__logo {
-  display: none; }
+  display: none;
+  font-weight: 400; }
 
 .navbar__menu-icon {
   display: inline-block;
   font-size: 2.5rem;
-  color: #F2F2F2; }
+  color: #F2F2F2;
+  cursor: pointer; }
 
 .navbar__menu-items {
   display: none; }
@@ -38,7 +44,9 @@ a {
 
 .home__header {
   height: 80vh;
-  background-color: #F9F9F9; }
+  background-color: #F9F9F9;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .home__overlay {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(47, 128, 237, 0.5)), to(rgba(24, 177, 249, 0.5)));
@@ -64,7 +72,7 @@ a {
   color: #F2F2F2;
   opacity: 1; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .home__content {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 75%;
@@ -74,9 +82,9 @@ a {
 @media screen and (min-width: 1024px) {
   .home__content {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 30%;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%; } }
+    -webkit-flex: 0 1 40%;
+        -ms-flex: 0 1 40%;
+            flex: 0 1 40%; } }
 
 .home__content h2 {
   font-size: 3rem;
@@ -89,6 +97,7 @@ a {
 
 .home__content a {
   display: inline-block;
+  margin-top: 1rem;
   padding: 0.5rem;
   color: #F2F2F2;
   border: 2px solid #F2F2F2; }
