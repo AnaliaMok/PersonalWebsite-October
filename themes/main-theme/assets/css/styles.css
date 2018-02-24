@@ -1,0 +1,9 @@
+/*
+  File Name: styles.css
+  Description: Main stylesheet. For importing
+  Author: Analia Mok
+*/
+.home {
+  font-family: "Source Sans Pro", sans-serif; }
+  .home__header {
+    background-color: #F9F9F9; }

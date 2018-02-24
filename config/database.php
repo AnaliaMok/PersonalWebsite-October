@@ -1,5 +1,5 @@
 <?php
-$dbopts = parse_url(getenv('DATABASE_URL') ?: 'postgres://user:pass@host:5432/dbname');
+$dbopts = parse_url(getenv('DATABASE_URL') ?: 'postgres://postgres:WebDev1@localhost:5432/analiamok');
 
 return [
 
@@ -27,7 +27,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------

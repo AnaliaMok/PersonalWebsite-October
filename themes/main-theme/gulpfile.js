@@ -80,20 +80,20 @@ gulp.task('browser-sync', function () {
 // - Uglifies/Minifies Concatenated script
 gulp.task('js', ['jshint'], function () {
   return gulp.src([
-    './assets/js/main.js',
+    './assets/js/*.js',
   ])
   .pipe(babel({
     presets: ['env']
   }))
-  .pipe(concat('main.js'))
+  .pipe(concat('script.js'))
   .on('error', function (err) {
     console.log(err.toString());
     this.emit("end");
   })
-  .pipe(gulp.dest('./dist/'))
+  .pipe(gulp.dest('./js'))
   .pipe(uglify())
   .pipe(rename({extname: '.min.js'}))
-  .pipe(gulp.dest('./dist/js'))
+  .pipe(gulp.dest('./js'))
   .pipe(notify({message: 'JavaScript Compilation Completed', onLast: true}));
 });
 
@@ -109,29 +109,47 @@ gulp.task('jshint', function () {
 
 // FIXME
 // Sass Compilation
-gulp.task('sass', function () {
-  return gulp.src('./assets/sass/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', function(){
-      notify({message: sass.logError, onLast: true});
-      this.emit('end');
-    }))
-    .pipe(sourcemaps.write({includeContent: false}))
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe(sourcemaps.write(''))
-    .pipe(lineEndCorrector()) // Consistent Line Endings for non UNIX systems.
-    .pipe(gulp.dest('./assets/css'))
-    .pipe(browserSync.stream())
-    .pipe(notify({message: 'Sass Compilation Successfully', onLast: true}));
+// gulp.task('sass', function () {
+//   return gulp.src('./assets/sass/**/*.scss')
+//     .pipe(sourcemaps.init())
+//     .pipe(sass().on('error', function(){
+//       notify({message: sass.logError, onLast: true});
+//       this.emit('end');
+//     }))
+//     .pipe(sourcemaps.write({includeContent: false}))
+//     .pipe(sourcemaps.init({loadMaps: true}))
+//     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+//     .pipe(sourcemaps.write(''))
+//     .pipe(lineEndCorrector()) // Consistent Line Endings for non UNIX systems.
+//     .pipe(gulp.dest('./assets/css'))
+//     .pipe(browserSync.stream())
+//     .pipe(notify({message: 'Sass Compilation Successfully', onLast: true}));
+// });
+// gulp.task('styles', function () {
+//   gulp.src('./scss/style.scss')
+//     .pipe(sass({
+//       includePaths: './scss/**/*.scss',
+//       outputStyle:'compressed'
+//     }))
+//     .pipe(sourcemaps.init())
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(sourcemaps.write('./assets/css/'))
+//     .pipe(gulp.dest('./assets/css/'))
+//     .pipe(notify({message: 'Task: Styles Completed!'}))
+// });
+
+gulp.task('styles', function() {
+    gulp.src('./assets/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./assets/css/'))
 });
 
 // Watch Tasks for Reloading
-gulp.task('default', ['sass', 'js', 'browser-sync'], function () {
+gulp.task('default', ['styles', 'js', 'browser-sync'], function () {
   gulp.watch("../plugins/**/*.php", reload); // PHP Changes
-  gulp.watch("./assets/sass/**/*.scss", ['sass']); // Sass changes
+  gulp.watch("./assets/sass/**/*.scss", ['styles']); // Sass changes
   gulp.watch("./assets/js/*.js", ['js', reload]); // JS changes
-  gulp.watch("./content/**/*.htm").on('change', browserSync.reload);
+  gulp.watch("./content/**/*.htm").on('change', browserSync.reload); // Reload template files on change
   gulp.watch("./layouts/**/*.htm").on('change', browserSync.reload);
   gulp.watch("./pages/**/*.htm").on('change', browserSync.reload);
   gulp.watch("./partials/**/*.htm").on('change', browserSync.reload);
