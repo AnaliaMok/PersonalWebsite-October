@@ -5,18 +5,19 @@ description = "This is the home page"
 is_hidden = 0
 ==
 <div class="container home">
-  <div class="home__header" style="background: #F9F9F9 url('{{ 'starry-night-1440.png'|media }}') center/100% 100% no-repeat">
+  <div class="home__header" style="background: #F9F9F9 url('{{ 'starry-night-1440.png'|media }}') top center/100% 80% no-repeat fixed">
       <div class="overlay home__overlay">
           <div class="home__content">
               <h2>Full Stack Developer</h2>
               <p>
                   Hi, I’m Analia. I build responsive websites and web apps for all
                   modern browsers, utilizing popular tools and content management
-                  systems such as ES6 and Wordpress.
+                  systems such as <em>ES6</em> and <em>Wordpress</em>.
               </p>
               <!-- TODO: Link to work page -->
               <a href="#">Check Out My Work</a>
           </div><!-- .home__content -->
+          <i class="fas fa-angle-double-down" id="go-down-button"></i>
       </div><!-- .overlay -->
   </div><!-- #home__header -->
   <div class="home__who-cta">

@@ -15,11 +15,20 @@ html, body{
   position: relative;
   width: 100%;
   height: 100%;
+  color: $default-text-color;
+}
+
+html{
+  overflow: hidden;
+}
+body{
+  overflow: auto;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-size: $header-default-size;
   font-family: $header-font;
+  font-weight: 400;
 }
 
 a{
