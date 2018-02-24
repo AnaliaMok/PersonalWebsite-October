@@ -2,7 +2,17 @@ title = "Home"
 url = "/"
 layout = "default"
 description = "This is the home page"
+meta_title = "Analia Mok | Full Stack Developer"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "featured-work"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "work"
+postPage = "single-work"
 ==
 <div class="container home">
   <div class="home__header" style="background: #F9F9F9 url('{{ 'starry-night-1440.png'|media }}') top center/100% 80% no-repeat fixed">
@@ -67,7 +77,9 @@ is_hidden = 0
   <div class="home__work-cta">
       <h2>What I've Worked On</h2>
       <!-- TODO: Dynamically generate -->
-      <div class="home__work-grid word-grid"></div>
+      <div class="home__work-grid word-grid">
+          {% component 'blogPosts' %}
+      </div>
       <!-- TODO: Change Link to Work page -->
       <a href="{{ 'work'|page }}" class="button">Wait! I've Done More</a>
   </div>
