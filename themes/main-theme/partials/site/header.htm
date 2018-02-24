@@ -1,12 +1,12 @@
 ==
-<nav>
-    <div class="navbar-logo">
+<nav class="navbar">
+    <div class="navbar__logo">
         <a href="{{ 'home'|page }}">Analia Mok</a>
     </div>
-    <div id="nav-menu-icon">
+    <div class="navbar__menu-icon">
         <i class="fas fa-bars"></i>
     </div>
-    <ul>
+    <ul class="navbar__menu-items">
         <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
         <li class="{% if this.page.id == 'about' %}active{% endif %}"><a href="{{ 'about'|page }}">About Me</a></li>
         <li class="{% if this.page.id == 'work' %}active{% endif %}"><a href="{{ 'work'|page }}">Work</a></li>

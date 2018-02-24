@@ -107,24 +107,6 @@ gulp.task('jshint', function () {
     }))
 });
 
-// FIXME
-// Sass Compilation
-// gulp.task('sass', function () {
-//   return gulp.src('./assets/sass/**/*.scss')
-//     .pipe(sourcemaps.init())
-//     .pipe(sass().on('error', function(){
-//       notify({message: sass.logError, onLast: true});
-//       this.emit('end');
-//     }))
-//     .pipe(sourcemaps.write({includeContent: false}))
-//     .pipe(sourcemaps.init({loadMaps: true}))
-//     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-//     .pipe(sourcemaps.write(''))
-//     .pipe(lineEndCorrector()) // Consistent Line Endings for non UNIX systems.
-//     .pipe(gulp.dest('./assets/css'))
-//     .pipe(browserSync.stream())
-//     .pipe(notify({message: 'Sass Compilation Successfully', onLast: true}));
-// });
 // gulp.task('styles', function () {
 //   gulp.src('./scss/style.scss')
 //     .pipe(sass({
@@ -138,16 +120,38 @@ gulp.task('jshint', function () {
 //     .pipe(notify({message: 'Task: Styles Completed!'}))
 // });
 
+//
+// Task: styles
+// 1. Sass configuration
+// 2. Autoprefix
+// 2b. line correction
+// 3. Write uncompressed file to css folder
+// 4. Compress file
+// 5. Write min file to css folder
+//
 gulp.task('styles', function() {
-    gulp.src('./assets/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+  return gulp.src('./assets/scss/**/*.scss')
+        .pipe(sass({
+          outputStyle: 'compressed'
+        }))
+        .pipe(sass().on('error', function(){
+          notify({message: sass.logError, onLast: true});
+          this.emit('end');
+        }))
+        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe(lineEndCorrector()) // Consistent Line Endings for non UNIX systems.
         .pipe(gulp.dest('./assets/css/'))
+        .pipe(uglifycss())
+        .pipe(rename({extname: '.min.css'}))
+        .pipe(gulp.dest('./assets/css/'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(notify({message: 'Task: Styles Completed!', sound: false}));
 });
 
 // Watch Tasks for Reloading
 gulp.task('default', ['styles', 'js', 'browser-sync'], function () {
   gulp.watch("../plugins/**/*.php", reload); // PHP Changes
-  gulp.watch("./assets/sass/**/*.scss", ['styles']); // Sass changes
+  gulp.watch("./assets/scss/**/*.scss", ['styles']); // Sass changes
   gulp.watch("./assets/js/*.js", ['js', reload]); // JS changes
   gulp.watch("./content/**/*.htm").on('change', browserSync.reload); // Reload template files on change
   gulp.watch("./layouts/**/*.htm").on('change', browserSync.reload);

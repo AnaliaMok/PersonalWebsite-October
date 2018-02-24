@@ -1,0 +1,33 @@
+//
+// File Name: _navbar.scss
+// Description: Navigation styling
+// Author: Analia Mok
+//
+
+.navbar{
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  text-align: right;
+
+  &__logo{
+    // Hide By default
+    display: none;
+  }
+
+  &__menu-icon{
+    display: inline-block;
+    font-size: 2.5rem;
+    color: $alt-text-color;
+  }
+
+  &__menu-items{
+    // Hidden By default
+    display: none;
+    li{
+      a{
+        color: $default-text-color;
+      }
+    }
+  }
+
+}
