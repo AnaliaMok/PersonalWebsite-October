@@ -18,14 +18,14 @@ description = "Overriding blogPosts partial"
           href="{{ post.url }}"
           class="work__overlay solid"
           style="background-color: {{post.setting.default_background_color}}"
-          title="{{ post.title }}"
+
         >
       {% endif %}
-          {% if post.setting %}
-            {% if post.setting.project_logo %}
-              <i class="{{post.setting.project_logo}}"></i>
-            {% endif %}
+
+          {% if post.setting.project_logo %}
+            <i class="{{post.setting.project_logo}}"></i>
           {% endif %}
+          <span>{{ post.summary|striptags }}</span>
         </a><!-- .work__overlay -->
       </div><!-- .work__item -->
   {% endfor %}

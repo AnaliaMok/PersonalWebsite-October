@@ -248,6 +248,15 @@
       margin-top: 2rem;
       color: $sky-blue;
       border: 2px solid $sky-blue;
+      transition: all 0.2s;
+
+      @media screen and (min-width: $tablet){
+        &:hover{
+          background-color: $sky-blue;
+          color: $alt-text-color;
+        }
+      }
+
     }
 
     h2{

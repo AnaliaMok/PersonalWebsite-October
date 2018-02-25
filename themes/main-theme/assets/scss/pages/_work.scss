@@ -32,6 +32,7 @@
       &:nth-child(2){
         flex: 1 1 50%;
       }
+
     }
 
   }
@@ -40,6 +41,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
@@ -50,6 +53,27 @@
     svg{
       font-size: 3.5rem;
       color: $alt-text-color;
+    }
+
+    span{
+      position: relative;
+      z-index: 10;
+      transform: translateY(400px);
+      transition: transform .4s ease-out;
+    }
+
+    @media screen and (min-width: $desktop){
+      svg{transition: transform .45s;}
+
+      &:hover{
+        svg{
+          transform: translateY(-50%);
+        }
+        span{
+          transform: translateY(50%);
+          color: $alt-text-color;
+        }
+      }
     }
 
   }
