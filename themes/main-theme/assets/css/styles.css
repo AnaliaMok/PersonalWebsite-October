@@ -34,7 +34,15 @@ ul {
   padding: 0.5rem;
   font-size: 1.2rem;
   color: #F2F2F2;
-  border: 2px solid #F2F2F2; }
+  border: 2px solid #F2F2F2;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
+@media screen and (min-width: 992px) {
+  .button:hover {
+    color: #2F80ED;
+    border: 2px solid #F9F9F9;
+    background-color: #F9F9F9; } }
 
 .navbar {
   position: fixed;

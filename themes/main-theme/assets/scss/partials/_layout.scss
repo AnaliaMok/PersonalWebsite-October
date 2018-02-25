@@ -46,4 +46,14 @@ ul{
   font-size: $default-font-size;
   color: $alt-text-color;
   border: 2px solid $alt-text-color;
+
+  transition: all 0.2s;
+}
+
+.button:hover{
+  @media screen and (min-width: $tablet){
+    color: $darker-blue;
+    border: 2px solid $lightest-gray;
+    background-color: $lightest-gray;
+  }
 }
