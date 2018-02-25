@@ -1,0 +1,59 @@
+//
+// File Name: _work.scss
+// Description: Work CTA and page layout
+// Author: Analia Mok
+//
+
+.work{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item{
+    position: relative;
+    min-width: 100px;
+    min-height: 200px;
+    max-height: 300px;
+    flex: 1 1 100%;
+    overflow: hidden;
+
+    @media screen and (min-width: $tablet){
+      min-height: 300px;
+      max-height: 400px;
+      flex: 1 1 50%;
+    }
+
+    @media screen and (min-width: $desktop){
+      flex: 1 1 33.333%;
+
+      // First and second children
+      &:first-child,
+      &:nth-child(2){
+        flex: 1 1 50%;
+      }
+    }
+
+  }
+
+  &__overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: $default-transparency;
+
+    svg{
+      font-size: 3.5rem;
+      color: $alt-text-color;
+    }
+
+  }
+
+  .solid{ opacity: 1; }
+
+}

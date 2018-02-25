@@ -4,4 +4,14 @@ layout = "default"
 meta_title = "Analia Mok | Latest Work"
 meta_description = "Analia has worked on many web applications, both personal projects and professionals works."
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "featured-work, work"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at asc"
+categoryPage = "work"
+postPage = "single-work"
 ==
+{% component 'blogPosts' %}
