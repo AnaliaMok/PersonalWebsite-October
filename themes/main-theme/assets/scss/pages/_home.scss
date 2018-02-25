@@ -239,9 +239,19 @@
     text-align: center;
     background-color: $lightest-gray;
 
+    @media screen and (min-width: $tablet){
+      padding: 3rem 4rem;
+    }
+
     .button{
+      display: inline-block;
+      margin-top: 2rem;
       color: $sky-blue;
       border: 2px solid $sky-blue;
+    }
+
+    h2{
+      margin-bottom: 1rem;
     }
   }
 

@@ -10,12 +10,12 @@ pageNumber = "{{ :page }}"
 categoryFilter = "featured-work"
 postsPerPage = 5
 noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
+sortOrder = "published_at asc"
 categoryPage = "work"
 postPage = "single-work"
 ==
 <div class="container home">
-  <div class="home__header"> <!--style="background: #F9F9F9 url('{{ 'starry-night-1440.png'|media }}') top center/100% no-repeat fixed">-->
+  <div class="home__header">
     <div class="home__hero-header"></div>
       <div class="overlay home__overlay">
           <div class="home__content">
@@ -86,7 +86,7 @@ postPage = "single-work"
   <div class="home__work-cta">
       <h2>What I've Worked On</h2>
       <!-- TODO: Dynamically generate -->
-      <div class="home__work-grid word-grid">
+      <div class="home__work-grid">
           {% component 'blogPosts' %}
       </div>
       <!-- TODO: Change Link to Work page -->
