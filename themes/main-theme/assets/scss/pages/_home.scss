@@ -1,13 +1,23 @@
 .home{
 
   &__header{
-    height: 75vh;
+    position: relative;
+    height: 100vh;
     background-color: $lightest-gray;
+
+    background: url('../images/starry-night-mobile.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% 100%;
+    background-clip: content-box;
 
     @media screen and (min-width: $tablet){
-      height: 80vh;
+      background: url('../images/starry-night-1440.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      background-clip: content-box;
+      height: 75vh;
     }
 
   }
@@ -60,6 +70,10 @@
 
     }
 
+    a{
+      margin-bottom: 1rem;
+    }
+
   }
 
   &__who-cta{
@@ -98,7 +112,7 @@
     text-align: center;
 
     @media screen and (min-width: $tablet){
-      padding: 3rem 5rem;
+      //padding: 3rem 5rem;
     }
 
     h2{
@@ -106,27 +120,49 @@
       margin: 1rem 0;
     }
 
+    // Wrapper for skills list containers
     .skills-content{
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+
       flex: 1 1 100%;
 
-      @media screen and (min-width: $desktop){
-        margin: 0 1rem;
+      @media screen and (min-width: $tablet){
+        flex-wrap: nowrap;
       }
     }
 
   }
 
   &__skills-logo-bar{
+    display: flex; // For handling logo wrapping
     flex: 0 1 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
 
-    svg{
-      margin: 0 1.5rem;
-      font-size: 5rem;
+    @media screen and (min-width: $tablet){
+      display: block;
+      // justify-content: center;
+      // align-items: center;
+      // flex-wrap: nowrap;
     }
 
+    svg{
+      //margin: 0 1.5rem;
+      font-size: 6rem;
+
+      flex: 0 1 50%;
+
+      @media screen and (min-width: $tablet){
+        flex: none;
+        margin: 0 1.5rem;
+      }
+
+    }
+
+    // Logos
     .fa-html5{ color: $orange; }
     .fa-css3-alt{ color: $azure-blue; }
     .fa-js{ color: $yellow; }
@@ -136,22 +172,17 @@
   }
 
   &__skills-list-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 1rem;
-    vertical-align: top;
-    text-align: center;
+    //margin: 0 1rem;
 
-    // Flex for outer container
+    // Flex for skills-cta outer container
     flex: 1 1 100%;
 
     @media screen and (min-width: $tablet){
-      flex: 0 1 45%;
+      flex: 0 1 auto;
     }
     @media screen and (min-width: $desktop){
-      flex: 0 1 35%;
-      margin: 0 1rem;
+      // flex: 0 1 35%;
+      // margin: 0 1rem;
     }
 
 
@@ -161,19 +192,30 @@
       }
     }
 
-    .skills-column{
-      display: inline-block;
-      flex: 0 1 100%;
-      margin: 0 1rem;
-      width: 47.5%;
+    .skills-row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
 
       @media screen and (min-width: $tablet){
-        margin-top: 0;
-        flex: 0 1 45%;
+        flex-wrap: nowrap;
+      }
+
+    }
+
+    .skills-column{
+      //display: inline-block;
+      //flex: 0 1 100%;
+      margin: 0 1rem;
+      flex: 1 1 100%;
+
+      @media screen and (min-width: $tablet){
+        flex: 0 1 0;
       }
       @media screen and (min-width: $desktop){
-        flex: 0 1 40%;
-        margin: 0;
+        //flex: 0 1 40%;
+        //margin: 0;
       }
 
       li{
@@ -188,12 +230,14 @@
 
   &__skills-list-container:last-child{
     .skills-column{
-      flex: 1 1 30%;
+      //flex: 1 1 30%;
     }
   }
 
   &__work-cta{
+    padding: 3rem 2rem;
     text-align: center;
+    background-color: $lightest-gray;
 
     .button{
       color: $sky-blue;

@@ -63,7 +63,6 @@ ul {
   color: #2D2D2D; }
 
 footer {
-  margin-top: 2rem;
   padding: 2rem 1rem;
   text-align: center;
   color: #F9F9F9;
@@ -90,14 +89,23 @@ footer div#social-logos a {
   color: #F9F9F9; }
 
 .home__header {
-  height: 75vh;
+  position: relative;
+  height: 100vh;
   background-color: #F9F9F9;
+  background: url("../images/starry-night-mobile.png");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  background-size: 100% 100%;
+  background-clip: content-box; }
 
 @media screen and (min-width: 992px) {
   .home__header {
-    height: 80vh; } }
+    background: url("../images/starry-night-1440.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-clip: content-box;
+    height: 75vh; } }
 
 .home__overlay {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(47, 128, 237, 0.5)), to(rgba(24, 177, 249, 0.5)));
@@ -154,6 +162,9 @@ footer div#social-logos a {
   .home__content p {
     width: 42%; } }
 
+.home__content a {
+  margin-bottom: 1rem; }
+
 .home__who-cta {
   padding: 3rem 2rem;
   background-color: #F9F9F9;
@@ -192,10 +203,6 @@ footer div#social-logos a {
   padding: 3rem 2rem;
   text-align: center; }
 
-@media screen and (min-width: 992px) {
-  .home__skills-cta {
-    padding: 3rem 5rem; } }
-
 .home__skills-cta h2 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 100%;
@@ -212,25 +219,55 @@ footer div#social-logos a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%; }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .home__skills-cta .skills-content {
-    margin: 0 1rem; } }
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
 
 .home__skills-logo-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 100%;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-bottom: 1rem; }
 
+@media screen and (min-width: 992px) {
+  .home__skills-logo-bar {
+    display: block; } }
+
 .home__skills-logo-bar svg {
-  margin: 0 1.5rem;
-  font-size: 5rem; }
+  font-size: 6rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 50%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%; }
+
+@media screen and (min-width: 992px) {
+  .home__skills-logo-bar svg {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    margin: 0 1.5rem; } }
 
 .home__skills-logo-bar .fa-html5 {
   color: #E34C26; }
@@ -248,20 +285,6 @@ footer div#social-logos a {
   color: #464646; }
 
 .home__skills-list-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin: 0 1rem;
-  vertical-align: top;
-  text-align: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
@@ -270,60 +293,60 @@ footer div#social-logos a {
 @media screen and (min-width: 992px) {
   .home__skills-list-container {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 45%;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%; } }
-
-@media screen and (min-width: 1024px) {
-  .home__skills-list-container {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 35%;
-        -ms-flex: 0 1 35%;
-            flex: 0 1 35%;
-    margin: 0 1rem; } }
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto; } }
 
 @media screen and (min-width: 992px) {
   .home__skills-list-container h2 {
     margin-top: 0; } }
 
+.home__skills-list-container .skills-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+@media screen and (min-width: 992px) {
+  .home__skills-list-container .skills-row {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
+
 .home__skills-list-container .skills-column {
-  display: inline-block;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
   margin: 0 1rem;
-  width: 47.5%; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
 
 @media screen and (min-width: 992px) {
   .home__skills-list-container .skills-column {
-    margin-top: 0;
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 45%;
-        -ms-flex: 0 1 45%;
-            flex: 0 1 45%; } }
-
-@media screen and (min-width: 1024px) {
-  .home__skills-list-container .skills-column {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 40%;
-        -ms-flex: 0 1 40%;
-            flex: 0 1 40%;
-    margin: 0; } }
+    -webkit-flex: 0 1 0;
+        -ms-flex: 0 1 0px;
+            flex: 0 1 0; } }
 
 .home__skills-list-container .skills-column li {
   font-size: 1.2rem;
   font-weight: 300;
   white-space: nowrap; }
 
-.home__skills-list-container:last-child .skills-column {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 30%;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%; }
-
 .home__work-cta {
-  text-align: center; }
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #F9F9F9; }
 
 .home__work-cta .button {
   color: #18B1F9;
