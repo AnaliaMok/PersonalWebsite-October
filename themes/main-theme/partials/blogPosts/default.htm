@@ -4,5 +4,11 @@ description = "Overriding blogPosts partial"
 {% if blogPosts.posts.total %}
   {% for post in blogPosts.posts %}
     <a href="{{ post.url }}" class="work">{{ post.title }}</a>
+    <!-- <img src="{{post.featured_images[0].path}}" alt="{{post.featured_images[0].file_name}}"/> -->
+    {% if post.setting %}
+      <!-- <p>{{post.setting.default_background_color}}</p>
+      <p>{{post.setting.project_logo}}</p> -->
+    {% endif %}
+
   {% endfor %}
 {% endif %}

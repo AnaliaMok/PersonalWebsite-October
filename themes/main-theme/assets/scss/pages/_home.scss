@@ -90,8 +90,106 @@
   }
 
   &__skills-cta{
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    flex-wrap: wrap;
     padding: 3rem 2rem;
     text-align: center;
+
+    @media screen and (min-width: $tablet){
+      padding: 3rem 5rem;
+    }
+
+    h2{
+      flex: 0 1 100%;
+      margin: 1rem 0;
+    }
+
+    .skills-content{
+      display: flex;
+      justify-content: center;
+      flex: 1 1 100%;
+
+      @media screen and (min-width: $desktop){
+        margin: 0 1rem;
+      }
+    }
+
+  }
+
+  &__skills-logo-bar{
+    flex: 0 1 100%;
+    margin-bottom: 1rem;
+
+    svg{
+      margin: 0 1.5rem;
+      font-size: 5rem;
+    }
+
+    .fa-html5{ color: $orange; }
+    .fa-css3-alt{ color: $azure-blue; }
+    .fa-js{ color: $yellow; }
+    .fa-php{ color: $purple; }
+    .fa-wordpress-simple{ color: $darker-gray; }
+
+  }
+
+  &__skills-list-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+    vertical-align: top;
+    text-align: center;
+
+    // Flex for outer container
+    flex: 1 1 100%;
+
+    @media screen and (min-width: $tablet){
+      flex: 0 1 45%;
+    }
+    @media screen and (min-width: $desktop){
+      flex: 0 1 35%;
+      margin: 0 1rem;
+    }
+
+
+    h2{
+      @media screen and (min-width: $tablet){
+        margin-top: 0;
+      }
+    }
+
+    .skills-column{
+      display: inline-block;
+      flex: 0 1 100%;
+      margin: 0 1rem;
+      width: 47.5%;
+
+      @media screen and (min-width: $tablet){
+        margin-top: 0;
+        flex: 0 1 45%;
+      }
+      @media screen and (min-width: $desktop){
+        flex: 0 1 40%;
+        margin: 0;
+      }
+
+      li{
+        font-size: $default-font-size;
+        font-weight: 300;
+        white-space: nowrap;
+      }
+
+    }
+
+  }
+
+  &__skills-list-container:last-child{
+    .skills-column{
+      flex: 1 1 30%;
+    }
   }
 
   &__work-cta{

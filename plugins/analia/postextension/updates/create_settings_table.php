@@ -11,7 +11,7 @@ class CreateSettingsTable extends Migration
         Schema::create('analia_postextension_settings', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('post_id')->unsigned()->index();
+            $table->integer('post_id')->unsigned()->index(); // Foreign key needed to Blog's post_id
             $table->string('default_background_color')->nullable();
             $table->string('project_logo')->nullable();
             $table->timestamps();
