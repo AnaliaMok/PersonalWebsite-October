@@ -2,13 +2,22 @@ description = "Overriding blogPosts partial"
 ==
 
 {% if blogPosts.posts.total %}
+  <div class="work">
   {% for post in blogPosts.posts %}
-    <a href="{{ post.url }}" class="work">{{ post.title }}</a>
-    <!-- <img src="{{post.featured_images[0].path}}" alt="{{post.featured_images[0].file_name}}"/> -->
-    {% if post.setting %}
-      <!-- <p>{{post.setting.default_background_color}}</p>
-      <p>{{post.setting.project_logo}}</p> -->
-    {% endif %}
-
+      {% if post.featured_images[0] %}
+      <div class="work__item" style="background: #F9F9F9 url({{post.featured_images[0].path}}) center/cover no-repeat">
+        <div class="work__overlay" style="background-color: {{post.setting.default_background_color}}">
+      {% else %}
+      <div class="work__item">
+        <div class="work__overlay solid" style="background-color: {{post.setting.default_background_color}}">
+      {% endif %}
+          {% if post.setting %}
+            {% if post.setting.project_logo %}
+              <i class="{{post.setting.project_logo}}"></i>
+            {% endif %}
+          {% endif %}
+        </div><!-- .work__overlay -->
+      </div><!-- .work__item -->
   {% endfor %}
+</div><!-- .work -->
 {% endif %}
