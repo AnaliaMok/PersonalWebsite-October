@@ -48,30 +48,33 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: $default-transparency;
+    //opacity: $default-transparency;
 
     svg{
       font-size: 3.5rem;
       color: $alt-text-color;
+      transition: transform 0.45s ease-out;
     }
 
     span{
-      position: relative;
+      position: absolute;
       z-index: 10;
+      padding: 1rem;
+      text-align: justify;
       transform: translateY(400px);
-      transition: transform .4s ease-out;
+      transition: transform 0.45s ease-out;
     }
 
     @media screen and (min-width: $desktop){
-      svg{transition: transform .45s;}
 
       &:hover{
         svg{
-          transform: translateY(-50%);
+          transform: translateY(-400px);
         }
         span{
-          transform: translateY(50%);
+          transform: translateY(0);
           color: $alt-text-color;
+          font-size: $default-font-size;
         }
       }
     }
