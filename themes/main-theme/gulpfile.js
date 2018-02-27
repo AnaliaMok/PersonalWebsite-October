@@ -97,7 +97,7 @@ gulp.task('js', ['jshint'], function () { // FIXME
   .pipe(rename({extname: '.min.js'}))
   .pipe(gulp.dest('./assets/js'))
   .pipe(browserSync.reload({stream:true}))
-  .pipe(notify({message: 'JavaScript Compilation Completed', onLast: true}));
+  .pipe(notify({message: 'Task: JS Completed', onLast: true}));
 });
 
 gulp.task('jshint', function () {

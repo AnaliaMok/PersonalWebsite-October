@@ -10,6 +10,7 @@
     hideNavbar();
   });
 
+  // Allow overlay to count as closing navigation
   $('.navbar__overlay').click(function(){
     hideNavbar();
   });
@@ -29,5 +30,29 @@
       $('.navbar__menu-icon').css('display', 'none');
     }
   }
+
+  // Adjusting Navbar opacity
+  var hasScrolled = false;
+  $('body').scroll(function(){
+    hasScrolled = true;
+    setInterval(function(){
+      if(hasScrolled){
+        hasScrolled = false;
+
+        // Check height of overlay
+        var overlayHeight = $('.header').outerHeight();
+        var scrollLocation = $('body').scrollTop();
+        var offset = $('.navbar').outerHeight();
+
+        if((scrollLocation) >= (overlayHeight - offset)){
+          $('.navbar').addClass('navbar_solid');
+        }else{
+          $('.navbar').removeClass('navbar_solid');
+        }
+
+      }
+
+    }, 100);
+  });
 
 })(jQuery);

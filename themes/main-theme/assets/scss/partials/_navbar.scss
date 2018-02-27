@@ -82,3 +82,7 @@
     cursor: pointer;
   }
 }
+
+.navbar_solid{
+  @include blue-gradient-solid;
+}
