@@ -55,4 +55,12 @@
     }, 100);
   });
 
+  $(document).ready(function(){
+    // Set transform attribute on svgs - precaution
+    $('svg').each(function(){
+      var transform = $(this).css('transform');
+      $(this).attr('transform', transform);
+    });
+  });
+
 })(jQuery);
