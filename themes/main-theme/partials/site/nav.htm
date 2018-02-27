@@ -6,9 +6,12 @@
     <div class="navbar__menu-icon">
         <i class="fas fa-bars"></i>
     </div>
-    <ul class="navbar__menu-items">
-        <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
-        <li class="{% if this.page.id == 'about' %}active{% endif %}"><a href="{{ 'about'|page }}">About Me</a></li>
-        <li class="{% if this.page.id == 'work' %}active{% endif %}"><a href="{{ 'work'|page }}">Work</a></li>
-    </ul>
+    <div class="navbar__overlay">
+      <i class="fas fa-times" id="navbar_close"></i>
+      <ul class="navbar__menu-items">
+          <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+          <li class="{% if this.page.id == 'about' %}active{% endif %}"><a href="{{ 'about'|page }}">About Me</a></li>
+          <li class="{% if this.page.id == 'work' %}active{% endif %}"><a href="{{ 'work'|page }}">Work</a></li>
+      </ul>
+    </div>
 </nav>

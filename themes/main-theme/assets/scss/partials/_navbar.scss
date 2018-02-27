@@ -9,7 +9,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 5;
   padding: 0.75rem 2.5rem;
   background-color: transparent;
   text-align: right;
@@ -27,14 +27,58 @@
     cursor: pointer;
   }
 
+  &__overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
   &__menu-items{
     // Hidden By default
-    display: none;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
     li{
+      margin: 1rem;
       a{
-        color: $default-text-color;
+        color: $alt-text-color;
+        font-size: 3rem;
+        font-family: "Lato", sans-serif;
+
+        @media screen and (min-width: $tablet){
+          font-size: 4rem;
+        }
+      }
+
+      @media screen and (min-width: $tablet){
+        &:hover{
+          a{
+            color: darken($alt-text-color, 25%);
+          }
+        }
       }
     }
   }
 
+}
+
+// Visible overlay
+.visible{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: $alt-text-color;
+    cursor: pointer;
+  }
 }

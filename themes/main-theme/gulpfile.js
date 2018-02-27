@@ -96,6 +96,7 @@ gulp.task('js', ['jshint'], function () { // FIXME
   .pipe(uglify())
   .pipe(rename({extname: '.min.js'}))
   .pipe(gulp.dest('./assets/js'))
+  .pipe(browserSync.reload({stream:true}))
   .pipe(notify({message: 'JavaScript Compilation Completed', onLast: true}));
 });
 
@@ -154,7 +155,7 @@ gulp.task('styles', function() {
 gulp.task('default', ['styles', 'js', 'browser-sync'], function () {
   gulp.watch("../plugins/**/*.php", reload); // PHP Changes
   gulp.watch("./assets/scss/**/*.scss", ['styles']); // Sass changes
-  gulp.watch("./assets/js/src/*.js", ['js', reload]); // JS changes
+  gulp.watch("./assets/js/src/*.js", ['js']); // JS changes
   gulp.watch("./content/**/*.htm").on('change', browserSync.reload); // Reload template files on change
   gulp.watch("./layouts/**/*.htm").on('change', browserSync.reload);
   gulp.watch("./pages/**/*.htm").on('change', browserSync.reload);
