@@ -14,13 +14,12 @@
     position: relative;
     min-width: 100px;
     min-height: 200px;
-    height: 200px;
     max-height: 300px;
     flex: 1 1 100%;
     overflow: hidden;
 
     @media screen and (min-width: $tablet){
-      height: 300px;
+      min-height: 300px;
       max-height: 400px;
       flex: 1 1 50%;
     }
@@ -42,30 +41,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //flex-wrap: wrap;
-    flex-direction: column;
-
+    flex-wrap: wrap;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    //opacity: $default-transparency;
 
     svg{
-      position: absolute;
-      right: auto;
-      left: auto;
-      //flex: 1 1 100%;
+      flex: 1 1 100%;
       font-size: 3.5rem;
       color: $alt-text-color;
       transition: transform 0.45s ease-out;
     }
 
     span{
-      //position: absolute;
+      position: absolute;
+      z-index: 10;
       padding: 1rem;
       text-align: justify;
-      //flex: 1 1 100%;
+      flex: 1 1 100%;
       transform: translateY(400px);
       transition: transform 0.45s ease-out;
     }
