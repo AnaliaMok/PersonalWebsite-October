@@ -34,6 +34,12 @@
   // Adjusting Navbar opacity
   var hasScrolled = false;
   $('body').scroll(function(){
+
+    if($('.work__wrapper').length !== 0){
+      // Skip functionality on work page
+      return;
+    }
+
     hasScrolled = true;
     setInterval(function(){
       if(hasScrolled){
@@ -46,13 +52,22 @@
 
         if((scrollLocation) >= (overlayHeight - offset)){
           $('.navbar').addClass('navbar_solid');
+          //$('.navbar__logo').css('display', 'inline-block');
         }else{
           $('.navbar').removeClass('navbar_solid');
+          //$('.navbar__logo').css('display', 'none');
         }
 
       }
 
     }, 100);
   });
+
+  if($('.work__wrapper').length !== 0){
+    if($('.navbar').length !== 0){
+      $('.navbar').addClass('navbar_solid');
+      //$('.navbar__logo').css('display', 'inline-block');
+    }
+  }
 
 })(jQuery);

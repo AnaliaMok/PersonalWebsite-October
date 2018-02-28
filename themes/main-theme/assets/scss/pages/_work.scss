@@ -12,7 +12,8 @@
 
   // Page Layout Style
   &__wrapper{
-    margin: 2rem 2rem 4rem 2rem;
+    width: 95%;
+    margin: 6rem auto 4rem auto;
 
     .navbar{
       @include blue-gradient-solid;

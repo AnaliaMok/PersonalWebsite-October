@@ -17,7 +17,15 @@
   &__logo{
     // Hide By default
     display: none;
-    font-weight: 400;
+    float: left;
+    vertical-align: middle;
+    a{
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: $alt-text-color;
+      font-family: "Lato", sans-serif;
+    }
+
   }
 
   &__menu-icon{

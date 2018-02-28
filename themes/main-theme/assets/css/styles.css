@@ -56,7 +56,14 @@ ul {
 
 .navbar__logo {
   display: none;
-  font-weight: 400; }
+  float: left;
+  vertical-align: middle; }
+
+.navbar__logo a {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #F2F2F2;
+  font-family: "Lato", sans-serif; }
 
 .navbar__menu-icon {
   display: inline-block;
@@ -445,7 +452,8 @@ footer div#social-logos a {
           flex-wrap: wrap; }
 
 .work__wrapper {
-  margin: 2rem 2rem 4rem 2rem; }
+  width: 95%;
+  margin: 6rem auto 4rem auto; }
 
 .work__wrapper .navbar {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #2F80ED), to(#18B1F9));
