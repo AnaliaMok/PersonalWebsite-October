@@ -505,39 +505,43 @@ footer div#social-logos a {
           flex: 1 1 100%;
   font-size: 3.5rem;
   color: #F2F2F2;
-  -webkit-transition: -webkit-transform 0.45s ease-out;
-  transition: -webkit-transform 0.45s ease-out;
-  transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out, -webkit-transform 0.45s ease-out; }
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out; }
 
 .work__overlay span {
   position: absolute;
-  z-index: 10;
+  right: 0;
+  left: 0;
   padding: 1rem;
-  text-align: justify;
+  text-align: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  -webkit-transform: translateY(400px);
-      -ms-transform: translateY(400px);
-          transform: translateY(400px);
-  -webkit-transition: -webkit-transform 0.45s ease-out;
-  transition: -webkit-transform 0.45s ease-out;
-  transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out, -webkit-transform 0.45s ease-out; }
+  color: #F2F2F2;
+  font-size: 1.2rem;
+  -webkit-transform: translateY(400%);
+      -ms-transform: translateY(400%);
+          transform: translateY(400%);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out; }
 
 @media screen and (min-width: 1024px) {
   .work__overlay:hover svg {
-    -webkit-transform: translateY(-400px);
-        -ms-transform: translateY(-400px);
-            transform: translateY(-400px); }
+    -webkit-transform: translateY(-400%);
+        -ms-transform: translateY(-400%);
+            transform: translateY(-400%); }
   .work__overlay:hover span {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
-            transform: translateY(0);
-    color: #F2F2F2;
-    font-size: 1.2rem; } }
+            transform: translateY(0); } }
 
 .work .solid {
   opacity: 1; }
