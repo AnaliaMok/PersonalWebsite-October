@@ -74,8 +74,6 @@ ul {
   background-color: rgba(0, 0, 0, 0.8); }
 
 .navbar__menu-items {
-  position: absolute;
-  z-index: 10;
   text-align: center; }
 
 .navbar__menu-items li {
@@ -119,7 +117,9 @@ ul {
 .navbar_solid {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #2F80ED), to(#18B1F9));
   background: -webkit-linear-gradient(#2F80ED 30%, #18B1F9);
-  background: linear-gradient(#2F80ED 30%, #18B1F9); }
+  background: linear-gradient(#2F80ED 30%, #18B1F9);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 
 footer {
   padding: 2rem 1rem;
@@ -443,6 +443,16 @@ footer div#social-logos a {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+
+.work__wrapper {
+  margin: 2rem 2rem 4rem 2rem; }
+
+.work__wrapper .navbar {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #2F80ED), to(#18B1F9));
+  background: -webkit-linear-gradient(#2F80ED 30%, #18B1F9);
+  background: linear-gradient(#2F80ED 30%, #18B1F9);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 
 .work__item {
   position: relative;
