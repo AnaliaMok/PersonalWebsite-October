@@ -6,7 +6,7 @@ description = "Overriding blogPost partial"
 {% if post.featured_images.count != 0 %}
   <div
     class="single-work__header header"
-    style="background: #F9F9F9 url({{post.featured_images[0].path}}) center/cover no-repeat"
+    style="background: #F9F9F9 url({{post.featured_images[0].path}}) center/cover no-repeat fixed"
   >
     <div class="single-work__overlay" style="background-color: {{post.setting.default_background_color}}"></div>
   </div>
@@ -21,22 +21,32 @@ description = "Overriding blogPost partial"
 
 <!-- Content -->
 <div class="single-work__content">
-  <div class="single-work__column">
-    {{ post.content_html|raw }}
-  </div>
-  <!-- Sidebar Widgets -->
-  <div class="single-work__column">
-    {% if post.sidebar_content.technologies %}
-      <div class="single-work__widget">
-        <h2>Technologies</h2>
-        {{ post.sidebar_content.technologies|raw }}
-      </div>
-    {% endif %}
-    {% if post.sidebar_content.contributors %}
-      <div class="single-work__widget">
-        <h2>Contributors</h2>
-        {{ post.sidebar_content.contributors|raw }}
-      </div>
-    {% endif %}
-  </div>
-</div>
+  <div class="single-work__row">
+    <div class="breadcrumb">
+      <ul><!-- Temp -->
+        <li><a href="{{ 'home'|page }}">Home</a>&nbsp;&gt;&gt;&nbsp;</li>
+        <li><a href="{{ 'work'|page }}">Work</a></li>
+      </ul>
+    </div><!-- .breadcrumb -->
+  </div><!-- .row -->
+  <div class="single-work__row">
+    <div class="single-work__column">
+      {{ post.content_html|raw }}
+    </div>
+    <!-- Sidebar Widgets -->
+    <div class="single-work__column">
+      {% if post.sidebar_content.technologies %}
+        <div class="single-work__widget">
+          <h2>Technologies</h2>
+          {{ post.sidebar_content.technologies|raw }}
+        </div>
+      {% endif %}
+      {% if post.sidebar_content.contributors %}
+        <div class="single-work__widget">
+          <h2>Contributors</h2>
+          {{ post.sidebar_content.contributors|raw }}
+        </div>
+      {% endif %}
+    </div>
+  </div> <!-- .row -->
+</div><!-- .content -->

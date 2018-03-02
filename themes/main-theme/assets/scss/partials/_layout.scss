@@ -52,3 +52,16 @@ ul{
     background-color: $lightest-gray;
   }
 }
+
+// Global style breadcrumb
+.breadcrumb{
+  padding-bottom: 1rem;
+  ul li{
+    display: inline-block;
+
+    a{
+      font-size: 1.1rem;
+      color: $default-text-color;
+    }
+  }
+}

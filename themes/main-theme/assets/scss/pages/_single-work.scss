@@ -38,13 +38,12 @@
 
   &__content{
     width: 90%;
-    margin: 2rem auto;
+    margin: 2% auto 5% auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
     @media screen and (min-width: $tablet){
-      flex-wrap: nowrap;
     }
     @media screen and (min-width: $desktop){
       width: 75%;
@@ -55,8 +54,14 @@
       font-size: 3rem;
     }
 
-    // Role Header
+    // Sub-headers
+    h3{
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    // Job Position Header
     h4{
+      margin-bottom: 1rem;
       font-size: $default-font-size;
       color: $azure-blue;
       font-family: $default-font;
@@ -65,8 +70,17 @@
     p{
       margin-bottom: 1rem;
       font-weight: 300;
+      font-size: $default-font-size;
     }
 
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    flex: 1 1 100%;
   }
 
   &__column{

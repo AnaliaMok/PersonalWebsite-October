@@ -41,6 +41,16 @@ ul {
     border: 2px solid #F9F9F9;
     background-color: #F9F9F9; } }
 
+.breadcrumb {
+  padding-bottom: 1rem; }
+
+.breadcrumb ul li {
+  display: inline-block; }
+
+.breadcrumb ul li a {
+  font-size: 1.1rem;
+  color: #2D2D2D; }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -628,7 +638,42 @@ footer div#social-logos a {
 
 .single-work__content {
   width: 90%;
-  margin: 2rem auto;
+  margin: 2% auto 5% auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+@media screen and (min-width: 1024px) {
+  .single-work__content {
+    width: 75%; } }
+
+.single-work__content h1 {
+  font-weight: 900;
+  font-size: 3rem; }
+
+.single-work__content h3 {
+  margin: 1rem 0 0.5rem 0; }
+
+.single-work__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #2F80ED;
+  font-family: "Source Sans Pro",sans-serif; }
+
+.single-work__content p {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1.2rem; }
+
+.single-work__row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,30 +684,11 @@ footer div#social-logos a {
           justify-content: space-between;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-
-@media screen and (min-width: 992px) {
-  .single-work__content {
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; } }
-
-@media screen and (min-width: 1024px) {
-  .single-work__content {
-    width: 75%; } }
-
-.single-work__content h1 {
-  font-weight: 900;
-  font-size: 3rem; }
-
-.single-work__content h4 {
-  font-size: 1.2rem;
-  color: #2F80ED;
-  font-family: "Source Sans Pro",sans-serif; }
-
-.single-work__content p {
-  margin-bottom: 1rem;
-  font-weight: 300; }
+          flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
 
 .single-work__column {
   -webkit-box-flex: 1;
