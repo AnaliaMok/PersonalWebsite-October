@@ -16,6 +16,7 @@ html, body{
   width: 100%;
   height: 100%;
   color: $default-text-color;
+  overflow: auto;
 }
 
 html{
@@ -24,6 +25,8 @@ html{
 body{
   overflow: auto;
 }
+
+main{ display: block; }
 
 h1, h2, h3, h4, h5, h6{
   font-size: $header-default-size;

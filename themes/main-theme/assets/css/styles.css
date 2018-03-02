@@ -9,13 +9,17 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
-  color: #2D2D2D; }
+  color: #2D2D2D;
+  overflow: auto; }
 
 html {
   overflow: hidden; }
 
 body {
   overflow: auto; }
+
+main {
+  display: block; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
@@ -452,7 +456,7 @@ footer div#social-logos a {
           flex-wrap: wrap; }
 
 .work__wrapper {
-  width: 95%;
+  width: 100%;
   margin: 6rem auto 4rem auto; }
 
 .work__wrapper .navbar {
@@ -461,6 +465,10 @@ footer div#social-logos a {
   background: linear-gradient(#2F80ED 30%, #18B1F9);
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+
+@media screen and (min-width: 992px) {
+  .work__wrapper {
+    width: 95%; } }
 
 .work__item {
   position: relative;
@@ -551,7 +559,7 @@ footer div#social-logos a {
   transition: transform 0.4s ease-out;
   transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out; }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .work__overlay:hover svg {
     -webkit-transform: translateY(-400%);
         -ms-transform: translateY(-400%);
