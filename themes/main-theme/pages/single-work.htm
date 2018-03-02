@@ -8,4 +8,8 @@ is_hidden = 0
 slug = "{{ :slug }}"
 categoryPage = "work"
 ==
-{% component 'blogPost' %}
+
+<main class="work__wrapper">
+  <div class="header"></div><!-- Empty Header to Allow Navbar to be solid -->
+  {% component 'blogPost' %}
+</main>

@@ -6,3 +6,6 @@
   - Forcing settings update
 1.0.4:
   - Refactored id to post_id
+1.0.5:
+  - Create sidebar content table
+  - create_sidebar_contents_table.php

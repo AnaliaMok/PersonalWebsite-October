@@ -10,7 +10,7 @@ description = "Overriding blogPosts partial"
           href="{{ post.url }}"
           class="work__overlay"
           style="background-color: {{post.setting.default_background_color}}"
-          title="{{ post.title }}"
+          data-title="{{ post.title }}"
         >
       {% else %}
       <div class="work__item">
@@ -18,7 +18,7 @@ description = "Overriding blogPosts partial"
           href="{{ post.url }}"
           class="work__overlay solid"
           style="background-color: {{post.setting.default_background_color}}"
-          title="{{ post.title }}"
+          data-title="{{ post.title }}"
         >
       {% endif %}
 
