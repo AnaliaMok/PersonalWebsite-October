@@ -18,13 +18,12 @@
   // Open Navigation Close Button
   $('#navbar__close').click(function(){
     $('.navbar__overlay').removeClass('visible');
-    console.log('SVG Clicked');
   });
 
   function hideNavbar(){
     if($('.navbar__overlay').hasClass('visible')){
       $('.navbar__overlay').removeClass('visible');
-      $('.navbar__menu-icon').css('display', 'inline-block');
+      $('.navbar__menu-icon').css('display', 'block');
     }else{
       $('.navbar__overlay').addClass('visible');
       $('.navbar__menu-icon').css('display', 'none');
@@ -33,9 +32,9 @@
 
   // Adjusting Navbar opacity
   var hasScrolled = false;
-  $('body').scroll(function(){
+  $(document).scroll(function(){
 
-    if($('.work__wrapper').length !== 0){
+    if($('.work__wrapper').length !== 0 || $('.single-work').length !== 0){
       // Skip functionality on work page
       return;
     }
@@ -47,15 +46,15 @@
 
         // Check height of overlay
         var overlayHeight = $('.header').outerHeight();
-        var scrollLocation = $('body').scrollTop();
+        var scrollLocation = $(document).scrollTop();
         var offset = $('.navbar').outerHeight();
 
         if((scrollLocation) >= (overlayHeight - offset)){
           $('.navbar').addClass('navbar_solid');
-          //$('.navbar__logo').css('display', 'inline-block');
+          $('.navbar__logo').css('display', 'block');
         }else{
           $('.navbar').removeClass('navbar_solid');
-          //$('.navbar__logo').css('display', 'none');
+          $('.navbar__logo').css('display', 'none');
         }
 
       }
@@ -63,10 +62,10 @@
     }, 100);
   });
 
-  if($('.work__wrapper').length !== 0){
+  if($('.work__wrapper').length !== 0 || $('.single-work').length !== 0){
     if($('.navbar').length !== 0){
       $('.navbar').addClass('navbar_solid');
-      //$('.navbar__logo').css('display', 'inline-block');
+      $('.navbar__logo').css('display', 'block');
     }
   }
 

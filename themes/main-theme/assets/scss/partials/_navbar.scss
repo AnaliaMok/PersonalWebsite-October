@@ -14,11 +14,20 @@
   background-color: transparent;
   text-align: right;
 
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+  }
+
   &__logo{
     // Hide By default
     display: none;
-    float: left;
-    vertical-align: middle;
+
+    flex: 1 1 50%;
+    text-align: left;
+
     a{
       font-weight: 900;
       font-size: 1.5rem;
@@ -33,6 +42,8 @@
     font-size: 2.5rem;
     color: $alt-text-color;
     cursor: pointer;
+
+    flex: 1 1 50%;
   }
 
   &__overlay{

@@ -14,15 +14,7 @@
 html, body{
   position: relative;
   width: 100%;
-  height: 100%;
   color: $default-text-color;
-  overflow: auto;
-}
-
-html{
-  overflow: hidden;
-}
-body{
   overflow: auto;
 }
 

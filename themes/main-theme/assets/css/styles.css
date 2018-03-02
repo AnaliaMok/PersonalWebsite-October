@@ -8,14 +8,7 @@
 html, body {
   position: relative;
   width: 100%;
-  height: 100%;
   color: #2D2D2D;
-  overflow: auto; }
-
-html {
-  overflow: hidden; }
-
-body {
   overflow: auto; }
 
 main {
@@ -58,10 +51,30 @@ ul {
   background-color: transparent;
   text-align: right; }
 
+.navbar__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
 .navbar__logo {
   display: none;
-  float: left;
-  vertical-align: middle; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  text-align: left; }
 
 .navbar__logo a {
   font-weight: 900;
@@ -73,7 +86,11 @@ ul {
   display: inline-block;
   font-size: 2.5rem;
   color: #F2F2F2;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%; }
 
 .navbar__overlay {
   display: none;
@@ -571,3 +588,8 @@ footer div#social-logos a {
 
 .work .solid {
   opacity: 1; }
+
+.single-work__header {
+  position: relative;
+  height: 30vh;
+  background-color: #F9F9F9; }
