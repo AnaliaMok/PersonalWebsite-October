@@ -80,23 +80,24 @@ class Plugin extends PluginBase
           ],
         ]);
 
+        // Make sure post model always has a SidebarContent instance
         SidebarContentModel::getFromPost($model);
 
         $form->addSecondaryTabFields([
           'sidebar_content[technologies]' => [
             'label'   => 'Technologies (Optional)',
             'tab'     => 'Sidebar Content',
-            'type'    => 'textarea',
+            'type'    => 'richeditor',
             'span'    => 'left',
-            'size'    => 'large',
+            'size'    => 'huge',
             'placeholder' => 'Enter a ul here',
           ],
           'sidebar_content[contributors]' => [
             'label'   => 'Contributors (Optional)',
             'tab'     => 'Sidebar Content',
-            'type'    => 'textarea',
+            'type'    => 'richeditor',
             'span'    => 'left',
-            'size'    => 'large',
+            'size'    => 'huge',
             'placeholder' => 'Enter a ul here',
           ],
         ]);
