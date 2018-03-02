@@ -1,0 +1,42 @@
+description = "Overriding blogPost partial"
+==
+{% set post = __SELF__.post %}
+
+<!-- Hero header -->
+{% if post.featured_images.count != 0 %}
+  <div
+    class="single-work__header header"
+    style="background: #F9F9F9 url({{post.featured_images[0].path}}) center/cover no-repeat"
+  >
+    <div class="single-work__overlay" style="background-color: {{post.setting.default_background_color}}"></div>
+  </div>
+{% else %}
+  <div
+    class="single-work__header header"
+    style="background-color: {{post.setting.default_background_color}}"
+  >
+    <i class="{{post.setting.project_logo}}"></i>
+  </div>
+{% endif %}
+
+<!-- Content -->
+<div class="single-work__content">
+  <div class="single-work__column">
+    {{ post.content_html|raw }}
+  </div>
+  <!-- Sidebar Widgets -->
+  <div class="single-work__column">
+    {% if post.sidebar_content.technologies %}
+      <div class="single-work__widget">
+        <h2>Technologies</h2>
+        {{ post.sidebar_content.technologies|raw }}
+      </div>
+    {% endif %}
+    {% if post.sidebar_content.contributors %}
+      <div class="single-work__widget">
+        <h2>Contributors</h2>
+        {{ post.sidebar_content.contributors|raw }}
+      </div>
+    {% endif %}
+  </div>
+</div>

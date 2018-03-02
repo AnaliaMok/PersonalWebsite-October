@@ -8,8 +8,107 @@
 
   &__header{
     position: relative;
-    height: 30vh;
+    height: 25vh;
     background-color: $lightest-gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @media screen and (min-width: $tablet){
+      height: 35vh;
+    }
+
+    // Project Logo
+    svg{
+      color: $alt-text-color;
+      font-size: 4rem;
+    }
+
+  }
+
+  &__overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__content{
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet){
+      flex-wrap: nowrap;
+    }
+    @media screen and (min-width: $desktop){
+      width: 75%;
+    }
+
+    h1{
+      font-weight: 900;
+      font-size: 3rem;
+    }
+
+    // Role Header
+    h4{
+      font-size: $default-font-size;
+      color: $azure-blue;
+      font-family: $default-font;
+    }
+
+    p{
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+  }
+
+  &__column{
+    flex: 1 1 100%;
+
+    &:first-child{
+      @media screen and (min-width: $tablet){
+        flex: 1 1 60%;
+      }
+    }
+    &:last-child{
+      @media screen and (min-width: $tablet){
+        padding-left: 10%;
+        flex: 1 1 40%;
+      }
+      @media screen and (min-width: $desktop){
+        padding-left: 13%;
+      }
+
+    }
+  }
+
+  &__widget{
+    margin: 2rem 0;
+    padding: 1.5rem;
+    text-align: left;
+    background-color: $alt-background-color;
+
+    @media screen and (min-width: $tablet){
+      margin: 0 0 1rem 0;
+    }
+
+    h2{
+      margin-bottom: 0.5rem;
+    }
+
+    ul li{
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: $default-font-size;
+      a{color: $default-text-color;}
+    }
   }
 
 }
