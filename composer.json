@@ -39,7 +39,7 @@
         "fzaninotto/faker": "~1.7",
         "phpunit/phpunit": "~5.7",
         "phpunit/phpunit-selenium": "~1.2",
-        "heroku/heroku-buildpack-php": "*"
+        "heroku/heroku-buildpack-php": "dev-master"
     },
     "autoload-dev": {
         "classmap": [
