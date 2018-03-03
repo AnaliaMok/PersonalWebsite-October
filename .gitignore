@@ -1,4 +1,5 @@
 /bootstrap/compiled.php
+vendor/
 composer.phar
 .DS_Store
 .idea
@@ -21,4 +22,4 @@ nbproject
 themes/main-theme/node_modules/*
 
 # local files
-config/database.php
+# config/database.php
