@@ -196,7 +196,8 @@ footer div#social-logos a {
   background-size: 100% 100%;
   background-clip: content-box;
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 @media screen and (min-width: 992px) {
   .general__header {
@@ -212,7 +213,8 @@ footer div#social-logos a {
   background: linear-gradient(rgba(47, 128, 237, 0.5) 30%, rgba(24, 177, 249, 0.5));
   position: absolute;
   width: 100%;
-  height: inherit;
+  height: auto;
+  min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,6 +227,10 @@ footer div#social-logos a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+
+@media screen and (min-width: 992px) {
+  .general__overlay {
+    padding: 0.5rem; } }
 
 .general__content {
   margin: 2rem 1.5rem;
@@ -280,6 +286,25 @@ footer div#social-logos a {
 
 .general__content ul li a {
   display: block;
+  color: #F9F9F9; }
+
+.general__redirect-content {
+  margin-top: 0.5rem; }
+
+@media screen and (min-width: 992px) {
+  .general__redirect-content {
+    margin-top: 4rem; } }
+
+.general__redirect-content p {
+  font-weight: 300;
+  font-size: 1.2rem; }
+
+.general__redirect-content div#social-logos {
+  margin-top: 0.5rem;
+  font-size: 2.5rem; }
+
+.general__redirect-content div#social-logos a {
+  margin: 0 0.5rem;
   color: #F9F9F9; }
 
 .home__header {

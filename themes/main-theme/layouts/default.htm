@@ -24,12 +24,15 @@ function onStart(){
     </head>
     <body>
 
+        {% if this.page.id != 'maintenance' %}
         <!-- Navigation -->
         {% partial 'site/nav' %}
+        {% endif %}
 
         <!-- Content -->
         {% page %}
 
+        {% if this.page.id != 'maintenance' %}
         <!-- Footer -->
         {% partial 'site/footer' %}
 
@@ -38,6 +41,6 @@ function onStart(){
           '@jquery'
         ]|theme }}"></script>
         {% scripts %}
-
+        {% endif %}
     </body>
 </html>

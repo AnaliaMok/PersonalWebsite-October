@@ -9,6 +9,8 @@
     @include default-header('../images/starry-sky-768.png');
     position: relative;
     height: 100vh;
+    //height: auto;
+    overflow: hidden;
 
     @media screen and (min-width: $tablet){
       @include default-header('../images/starry-sky.png');
@@ -20,11 +22,16 @@
     @include blue-gradient;
     position: absolute;
     width: 100%;
-    height: inherit;
+    height: auto;
+    min-height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: $tablet){
+      padding: 0.5rem;
+    }
 
   }
 
@@ -70,6 +77,29 @@
           display: block;
           color: $lightest-gray;
         }
+      }
+    }
+  }
+
+  // Only found on maintenance page
+  &__redirect-content{
+    margin-top: 0.5rem;
+
+    @media screen and (min-width: $tablet){
+      margin-top: 4rem;
+    }
+
+    p{
+      font-weight: 300;
+      font-size: $default-font-size;
+    }
+
+    div#social-logos{
+      margin-top: 0.5rem;
+      font-size: 2.5rem;
+      a{
+        margin: 0 0.5rem;
+        color: $lightest-gray;
       }
     }
   }
