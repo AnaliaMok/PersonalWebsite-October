@@ -1,0 +1,77 @@
+//
+//  File Name: _general.scss
+//  Description: General Styling for generic pages
+//  Author: Analia Mok
+//
+
+.general{
+  &__header{
+    @include default-header('../images/starry-sky-768.png');
+    position: relative;
+    height: 100vh;
+
+    @media screen and (min-width: $tablet){
+      @include default-header('../images/starry-sky.png');
+    }
+
+  }
+
+  &__overlay{
+    @include blue-gradient;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__content{
+    margin: 2rem 1.5rem;
+    text-align: center;
+    color: $alt-text-color;
+
+    h1{
+      font-size: 2.5rem;
+
+      @media screen and (min-width: $tablet){
+        font-size: 4rem;
+      }
+    }
+
+    p, ul li a{
+      font-size: $default-font-size;
+    }
+    p{
+      margin: 1rem 0;
+    }
+
+    ul{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: $tablet){
+        flex-wrap: nowrap;
+      }
+
+      li{
+        flex: 1 1 100%;
+        list-style-type: none;
+        margin: 0 0.5rem;
+
+        @media screen and (min-width: $tablet){
+          flex: 1 1 50%;
+        }
+
+        a{
+          display: block;
+          color: $lightest-gray;
+        }
+      }
+    }
+  }
+
+}

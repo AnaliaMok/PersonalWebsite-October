@@ -24,12 +24,17 @@
     if($('.navbar__overlay').hasClass('visible')){
       $('.navbar__overlay').removeClass('visible');
       $('.navbar__menu-icon').css('display', 'block');
-    }else{
-      $('.navbar__overlay').addClass('visible');
-      
-      if($('.single-work').length === 0){
-        $('.navbar__logo').css('display', 'none');
+
+      // Re-display logo if on the work page
+      if($('.work__wrapper').length !== 0 || $('.single-work').length !== 0 || $('.general__header').length !== 0){
+        $('.navbar__logo').css('display', 'block');
       }
+    }else{
+      // Turn on overlay
+      $('.navbar__overlay').addClass('visible');
+
+      // Hide background stuff
+      $('.navbar__logo').css('display', 'none');
     }
   }
 
@@ -58,7 +63,7 @@
         }else{
           $('.navbar').removeClass('navbar_solid');
 
-          if($('.single-work').length === 0){
+          if($('.single-work').length === 0 && $('.general__header').length === 0){
             $('.navbar__logo').css('display', 'none');
           }
         }
@@ -75,7 +80,7 @@
     }
   }
 
-  if($('.single-work').length !== 0){
+  if($('.single-work').length !== 0 || $('.general__header').length !== 0){
     if($('.navbar').length !== 0){
       $('.navbar__logo').css('display', 'block');
     }

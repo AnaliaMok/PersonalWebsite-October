@@ -17,3 +17,15 @@
 @mixin blue-gradient-solid(){
   background: linear-gradient($darker-blue 30%, $sky-blue);
 }
+
+// Default Size Header
+// User By:
+//   - home
+//   - general
+@mixin default-header($image_url){
+  background: url($image_url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-clip: content-box;
+}

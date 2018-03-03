@@ -5,18 +5,10 @@
     height: 100vh;
     background-color: $lightest-gray;
 
-    background: url('../images/starry-night-mobile.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    background-clip: content-box;
+    @include default-header('../images/starry-night-mobile.png');
 
     @media screen and (min-width: $tablet){
-      background: url('../images/starry-night-1440.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100% 100%;
-      background-clip: content-box;
+      @include default-header('../images/starry-night-mobile.png');
       height: 75vh;
     }
 
