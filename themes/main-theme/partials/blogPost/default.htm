@@ -1,5 +1,18 @@
 description = "Overriding blogPost partial"
 ==
+function onEnd(){
+  // Changing Page Title Dynamically
+  if(isset($this->blogPost)){
+    $this->page->title = $this->blogPost->post->title;
+  }else{
+    // Back Up
+    $this->page->title = "Single Work";
+  }
+
+  // TODO: Adjust meta description Dynamically
+
+}
+==
 {% set post = __SELF__.post %}
 
 <!-- Hero header -->
@@ -22,12 +35,6 @@ description = "Overriding blogPost partial"
 <!-- Content -->
 <div class="single-work__content">
   <div class="single-work__row">
-    <div class="breadcrumb">
-      <ul><!-- Temp -->
-        <li><a href="{{ 'home'|page }}">Home</a>&nbsp;&gt;&gt;&nbsp;</li>
-        <li><a href="{{ 'work'|page }}">Work</a></li>
-      </ul>
-    </div><!-- .breadcrumb -->
   </div><!-- .row -->
   <div class="single-work__row">
     <div class="single-work__column">
