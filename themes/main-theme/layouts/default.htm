@@ -10,11 +10,7 @@ function onStart(){
     <head>
         <meta charset="utf-8">
         <title>Analia Mok | {{ this.page.title }}</title>
-        {% if this.page.meta_description %}
         <meta name="description" content="{{ this.page.meta_description }}">
-        {% else %}
-        <meta name="description" content="{{ this.page.summary|striptags }}">
-        {% endif %}
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="AnaliaMok">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

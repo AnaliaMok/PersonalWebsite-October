@@ -31,17 +31,17 @@ class Meta extends Model
   
     // Helper method to make sure each post has a settings instance
     public static function getFromPost($post){
-    if($post->setting){
-        return $post->setting;
+    if($post->meta){
+        return $post->meta;
     }
 
-    $setting = new static;
-    $setting->post = $post;
-    $setting->save();
+    $meta = new static;
+    $meta->post = $post;
+    $meta->save();
 
-    // Setting reverse relationship
-    $post->setting = $setting;
+    // meta reverse relationship
+    $post->meta = $meta;
 
-    return $setting;
+    return $meta;
     }
 }

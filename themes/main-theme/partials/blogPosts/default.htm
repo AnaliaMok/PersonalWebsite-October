@@ -25,7 +25,7 @@ description = "Overriding blogPosts partial"
           {% if post.setting.project_logo %}
             <i class="{{post.setting.project_logo}}"></i>
           {% endif %}
-          <span>{{ post.summary|striptags }}</span>
+          <span>{{ post.summary }}</span>
         </a><!-- .work__overlay -->
       </div><!-- .work__item -->
   {% endfor %}

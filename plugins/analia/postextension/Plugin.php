@@ -112,7 +112,7 @@ class Plugin extends PluginBase
             'label'   => 'Meta Title',
             'tab'     => 'Meta',
             'type'    => 'richeditor',
-            'size'    => 'large',
+            'size'    => 'tiny',
           ],
           'meta[description]' => [
             'label'   => 'Meta Description',
