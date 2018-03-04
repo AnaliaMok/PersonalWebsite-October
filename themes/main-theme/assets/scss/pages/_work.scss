@@ -6,7 +6,7 @@
 
 .work{
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
@@ -41,7 +41,7 @@
     }
 
     @media screen and (min-width: $desktop){
-      flex: 1 1 33.333%;
+      flex: 0 1 33.333%;
 
       // First and second children
       &:first-child,
@@ -83,8 +83,12 @@
       flex: 1 1 100%;
       color: $alt-text-color;
       font-size: $default-font-size;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 300;
       transform: translateY(400%);
       transition: transform 0.4s ease-out;
+
+      p{ text-align: left; }
     }
 
     @media screen and (min-width: $tablet){
@@ -97,6 +101,7 @@
           transform: translateY(0);
         }
       }
+
     }
 
   }
