@@ -9,3 +9,6 @@
 1.0.5:
   - Create sidebar content table
   - create_sidebar_contents_table.php
+1.06:
+  - Created meta data table
+  - create_metas_table.php

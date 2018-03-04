@@ -3,9 +3,12 @@
 use Backend;
 use System\Classes\PluginBase;
 use RainLab\Blog\Models\Post as PostModel;
-use RainLab\Blog\Controllers\Posts as PostsController;
 use Analia\PostExtension\Models\Setting as SettingModel;
 use Analia\PostExtension\Models\SidebarContent as SidebarContentModel;
+use Analia\PostExtension\Models\Meta as MetaModel;
+
+use RainLab\Blog\Controllers\Posts as PostsController;
+
 
 /**
  * PostExtension Plugin Information File
@@ -47,6 +50,7 @@ class Plugin extends PluginBase
       PostModel::extend(function($model){
         $model->hasOne['setting'] = ['Analia\PostExtension\Models\Setting'];
         $model->hasOne['sidebar_content'] = ['Analia\PostExtension\Models\SidebarContent'];
+        $model->hasOne['meta'] = ['Analia\PostExtension\Models\Meta'];
       });
 
       // Can now access setting fields by: $post->setting->default_background_color
@@ -100,7 +104,25 @@ class Plugin extends PluginBase
           ],
         ]);
 
-      });
+        // Make sure post model always has a Meta instance
+        MetaModel::getFromPost($model);
+
+        $form->addSecondaryTabFields([
+          'meta[title]' => [
+            'label'   => 'Meta Title',
+            'tab'     => 'Meta',
+            'type'    => 'richeditor',
+            'size'    => 'large',
+          ],
+          'meta[description]' => [
+            'label'   => 'Meta Description',
+            'tab'     => 'Meta',
+            'type'    => 'richeditor',
+            'size'    => 'large',
+          ],
+        ]);
+
+      }); // End of controller
 
     }
 
