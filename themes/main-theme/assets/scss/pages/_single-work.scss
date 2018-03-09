@@ -73,6 +73,20 @@
       font-size: $default-font-size;
     }
 
+    // ul in content should have bullet points
+    ul{ 
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      list-style-type: circle; 
+
+      li{
+        font-weight: 300;
+        font-size: $default-font-size;
+
+        ul{margin-bottom: 0}
+      }
+    }
+
   }
 
   &__row{

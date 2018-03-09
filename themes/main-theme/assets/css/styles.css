@@ -529,10 +529,10 @@ footer div#social-logos a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
@@ -791,6 +791,18 @@ footer div#social-logos a {
   margin-bottom: 1rem;
   font-weight: 300;
   font-size: 1.2rem; }
+
+.single-work__content ul {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  list-style-type: circle; }
+
+.single-work__content ul li {
+  font-weight: 300;
+  font-size: 1.2rem; }
+
+.single-work__content ul li ul {
+  margin-bottom: 0; }
 
 .single-work__row {
   display: -webkit-box;
