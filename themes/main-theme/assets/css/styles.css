@@ -808,6 +808,9 @@ footer div#social-logos a {
 .single-work__content ul li ul {
   margin-bottom: 0; }
 
+.single-work__content a {
+  color: #2F80ED; }
+
 .single-work__row {
   display: -webkit-box;
   display: -webkit-flex;
