@@ -757,7 +757,7 @@ footer div#social-logos a {
 
 .single-work__content {
   width: 90%;
-  margin: 2% auto 5% auto;
+  margin: 5% auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -769,6 +769,10 @@ footer div#social-logos a {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+
+@media screen and (min-width: 992px) {
+  .single-work__content {
+    margin: 3% auto 5% auto; } }
 
 @media screen and (min-width: 1024px) {
   .single-work__content {
@@ -821,6 +825,12 @@ footer div#social-logos a {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%; }
 
+@media screen and (min-width: 992px) {
+  .single-work__row {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
+
 .single-work__column {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
@@ -865,4 +875,4 @@ footer div#social-logos a {
   font-size: 1.2rem; }
 
 .single-work__widget ul li a {
-  color: #2D2D2D; }
+  color: #2F80ED; }
