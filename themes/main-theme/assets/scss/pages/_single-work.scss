@@ -90,6 +90,29 @@
 
     a{ color: $azure-blue; }
 
+    a.link-button{
+      display: inline-block;
+      padding: 0.5em;
+      border: 2px solid $azure-blue;
+      transition: all 0.2s;
+
+      @media screen and (min-width: $tablet){
+        &:hover{
+          background-color: $azure-blue;
+          color: $alt-text-color;
+        }
+      }
+
+    }
+
+    // responsive images
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
   }
 
   &__row{

@@ -811,6 +811,24 @@ footer div#social-logos a {
 .single-work__content a {
   color: #2F80ED; }
 
+.single-work__content a.link-button {
+  display: inline-block;
+  padding: 0.5em;
+  border: 2px solid #2F80ED;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
+@media screen and (min-width: 992px) {
+  .single-work__content a.link-button:hover {
+    background-color: #2F80ED;
+    color: #F2F2F2; } }
+
+.single-work__content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto; }
+
 .single-work__row {
   display: -webkit-box;
   display: -webkit-flex;
