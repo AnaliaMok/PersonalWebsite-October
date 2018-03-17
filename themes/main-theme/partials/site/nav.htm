@@ -1,11 +1,15 @@
 ==
 <nav class="navbar">
   <div class="navbar__container">
-    <div class="navbar__logo">
+    <div class="navbar__container-column">
+      <div class="navbar__logo">
         <a href="{{ 'home'|page }}">Analia Mok</a>
+      </div>
     </div>
-    <div class="navbar__menu-icon">
+    <div class="navbar__container-column">
+      <div class="navbar__menu-icon">
         <i class="fas fa-bars"></i>
+      </div>
     </div>
     <div class="navbar__overlay">
       <i class="fas fa-times" id="navbar_close"></i>
@@ -14,5 +18,5 @@
           <li class="{% if this.page.id == 'work' %}active{% endif %}"><a href="{{ 'work'|page }}">Work</a></li>
       </ul>
     </div>
-  </div>
+  </div><!-- .container -->
 </nav>
