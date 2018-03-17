@@ -23,7 +23,11 @@
     // Project Logo
     svg{
       color: $alt-text-color;
-      font-size: 4rem;
+      font-size: 2.5rem;
+
+      @media screen and (min-width: $tablet) {
+        font-size: 4rem;
+      }
     }
 
   }
