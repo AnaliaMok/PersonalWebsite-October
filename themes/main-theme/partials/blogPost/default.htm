@@ -3,7 +3,9 @@ description = "Overriding blogPost partial"
 function onEnd(){
   // Changing Page Title Dynamically
   if(isset($this->blogPost)){
-    $this->page->title = $this->blogPost->post->title;
+    $this->page->title = strip_tags($this->blogPost->post->title);
+    $this->page->meta_title = strip_tags($this->blogPost->post->meta->title);
+    $this->page->meta_description = $this->blogPost->post->meta->description;
   }else{
     // Back Up
     $this->page->title = "Single Work";
