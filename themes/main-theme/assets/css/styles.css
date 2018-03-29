@@ -248,10 +248,10 @@ footer div#social-logos a {
   color: #2F80ED; }
 
 .project-carousel__active__left-arrow {
-  left: 0; }
+  left: 1rem; }
 
 .project-carousel__active__right-arrow {
-  right: 0; }
+  right: 1rem; }
 
 .project-carousel__active-thumbnail {
   position: relative; }

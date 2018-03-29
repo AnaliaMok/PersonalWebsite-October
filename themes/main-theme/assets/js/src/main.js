@@ -22,6 +22,7 @@
 
   function hideNavbar(){
     if($('.navbar__overlay').hasClass('visible')){
+      // If navbar already visible
       $('.navbar__overlay').removeClass('visible');
       $('.navbar__menu-icon').css('display', 'block');
 
@@ -34,7 +35,7 @@
       $('.navbar__overlay').addClass('visible');
 
       // Hide background stuff
-      $('.navbar__logo').css('display', 'none');
+      //$('.navbar__logo').css('display', 'none');
     }
   }
 
@@ -108,6 +109,7 @@
         activeImage = activeItem.find('img');
     
     activeImage[0].src = imageSrc;
+    activeImage[0].setAttribute('title', image.getAttribute('title'));
     activeItem[0].setAttribute('data-id', targetId);
 
     // Swap which thumbnail has the active-thumbnail class
@@ -133,6 +135,7 @@
 
     activeImage[0].src = prevImageSrc;
     activeItem[0].setAttribute('data-id', prevSlideNumber);
+    activeImage[0].setAttribute('title', prevImageItem[0].getAttribute('title'));
 
     // Swap which thumbnail has the active-thumbnail class
     $('.project-carousel__active-thumbnail').removeClass('project-carousel__active-thumbnail');
@@ -157,6 +160,7 @@
 
     activeImage[0].src = nextImageSrc;
     activeItem[0].setAttribute('data-id', nextSlideNumber);
+    activeImage[0].setAttribute('title', nextImageItem[0].getAttribute('title'));
 
     // Swap which thumbnail has the active-thumbnail class
     $('.project-carousel__active-thumbnail').removeClass('project-carousel__active-thumbnail');
