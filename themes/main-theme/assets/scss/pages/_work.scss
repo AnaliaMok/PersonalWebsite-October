@@ -70,7 +70,7 @@
       font-size: 3.5rem;
       color: $alt-text-color;
       transform: translateY(0);
-      transition: transform 0.4s ease-out;
+      transition: transform 0.4s ease;
     }
 
     span{
@@ -95,7 +95,7 @@
       font-weight: 300;
       text-align: center;
       transform: translateY(400%);
-      transition: transform 0.4s ease-out;
+      transition: transform 0.4s ease;
 
       h2,
       p{ 
