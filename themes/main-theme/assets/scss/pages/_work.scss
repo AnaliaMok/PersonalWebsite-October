@@ -74,10 +74,18 @@
     }
 
     span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
       position: absolute;
+      top: 0;
       right: 0;
+      bottom: 0;
       left: 0;
       //z-index: 10;
+      margin: 0 auto;
       padding: 1rem;
       text-align: center;
       flex: 1 1 100%;
@@ -85,8 +93,15 @@
       font-size: $default-font-size;
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 300;
+      text-align: center;
       transform: translateY(400%);
       transition: transform 0.4s ease-out;
+
+      h2,
+      p{ 
+        flex: 1 1 100%;
+        text-align: center; 
+      }
 
       p{ text-align: justify; }
     }
