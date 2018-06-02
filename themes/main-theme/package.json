@@ -34,7 +34,8 @@
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "notify-send": "^0.1.2",
-    "pump": "^3.0.0"
+    "pump": "^3.0.0",
+    "hoek": "^4.2.1"
   },
   "respository": "git://github.com/AnaliaMok/PersonalWebsite-October.git",
   "licenses": {
